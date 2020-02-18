@@ -14,7 +14,12 @@ public class EventService {
      */
 	public String newBlockEventSubscriber(ReqNewBlockSubscriber reqNewBlockSubscriber) throws Exception {
 		
-		//将订阅的信息保存到h2数据库做持久化保存
+		
+		if(reqNewBlockSubscriber.getSubscribe() == 1) {
+			//将订阅的信息保存到h2数据库做持久化保存
+		}else {
+			//取消订阅
+		}
         
 	        return null;
 	    }
@@ -25,6 +30,11 @@ public class EventService {
 	public String contractEventSubscriber(ReqContractEventSubscriber reqContractEventSubscriber) throws Exception {
 		
 		//将订阅的信息保存到h2数据库做持久化保存
+		if(reqContractEventSubscriber.getSubscribe() == 1) {
+			//将订阅的信息保存到h2数据库做持久化保存
+		}else {
+			//取消订阅
+		}
         
 	        return null;
 	    }
